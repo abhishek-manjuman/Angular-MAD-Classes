@@ -19,30 +19,30 @@
 		</div>
 		<div class="col-md-9">
             <form action="" #userForm = "ngForm">
-                {{userForm.value | json }}
+                <!-- {{userForm.value | json }} -->
 			<div class="contact-form">
 				<div class="form-group">
 				  <label class="control-label col-sm-2" for="fname">First Name:</label>
 				  <div class="col-sm-10">          
-					<input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname" ngModel>
+					<input type="text" class="form-control" id="fname" placeholder="Enter First Name" name="fname" [(ngModel)]="obj.fname">
 				  </div>
 				</div>
 				<div class="form-group">
 				  <label class="control-label col-sm-2" for="lname">Last Name:</label>
 				  <div class="col-sm-10">          
-					<input type="text" class="form-control" id="lname" placeholder="Enter Last Name" name="lname" ngModel>
+					<input type="text" class="form-control" id="lname" placeholder="Enter Last Name" name="lname" [(ngModel)]="obj.lname">
 				  </div>
 				</div>
 				<div class="form-group">
 				  <label class="control-label col-sm-2" for="email">Email:</label>
 				  <div class="col-sm-10">
-					<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" ngModel>
+					<input type="email" class="form-control" id="email" placeholder="Enter email" name="email" [(ngModel)]="obj.email">
 				  </div>
                 </div>
                 <div class="form-group">
                     <label class="control-label col-sm-2" for="phone">Phone:</label>
                     <div class="col-sm-10">
-                      <input type="tel" class="form-control" id="phone" placeholder="Enter phone number" name="phone" ngModel>
+                      <input type="tel" class="form-control" id="phone" placeholder="Enter phone number" name="phone" [(ngModel)]="obj.phone">
                     </div>
                 </div>
                 <!-- <div class="form-group">
@@ -57,7 +57,7 @@
                 <div class="form-group">
                     <label class="control-label col-sm-2" for="password">Password:</label>
                     <div class="col-sm-10">
-                      <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" ngModel>
+                      <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" [(ngModel)]="obj.password">
                     </div>
                   </div>
 				<div class="form-group">        
@@ -70,3 +70,4 @@
 		</div>
 	</div>
 </div>
+<app-user-dashboard (formData) = obj></app-user-dashboard>

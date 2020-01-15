@@ -11,7 +11,7 @@ export class UserRegistrationComponent implements OnInit {
 
 
   gender = ["Male","Female", "Other"]
-  formData: any = {};
+  obj: any = {};
   
   ngOnInit() {
 
